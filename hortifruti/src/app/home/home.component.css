@@ -1,3 +1,26 @@
-.inicio{
-    
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+.container-fluid {
+  width: 100vd;
+  height: 100vh;
+  background:
+        /* top, transparent black, faked with gradient */ 
+        linear-gradient(
+      rgba(199, 194, 194, 0.74),
+      rgba(199, 191, 191, 0.774)
+    ),
+    /* bottom, image */ url(https://i.imgur.com/Y065sUR.jpg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-title,
+.card-text {
+  width: 80%;
 }
