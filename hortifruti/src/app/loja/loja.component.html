@@ -1,0 +1,64 @@
+<div class="container ">
+
+    <div>
+        <h2 class="text-center text-monospace mt-5">Cadastre um produto</h2>
+        <hr class="col-4">
+    </div>
+
+    <div class=" col-12 ">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Nome:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite por exemplo Banana"
+                [(ngModel)]="produto.nome">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Preço:</label>
+            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Digite por exemplo 5,00"
+                [(ngModel)]="produto.preco">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Imagem:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2"
+                placeholder="Digite aqui a url da imagem" [(ngModel)]="produto.imagem">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Quantidade em estoque:</label>
+            <input type="number" class="form-control" id="formGroupExampleInput2"
+                placeholder="Digite a quantidade que tem disponivel" [(ngModel)]="produto.qtdEstoque">
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-success mr-5" (click)="publicar()">Cadastrar</button>
+        </div>
+
+    </div>
+
+
+    <div>
+        <h3 class="text-center mt-5 text-monospace">Bem vindxs a nossa loja</h3>
+        <hr class="col-5">
+    </div>
+
+
+    <div class="row col-12 d-flex justify-content-around mt-5">
+
+        <div class="card col-md-3 mx-3 mb-5 text-center" style="width: 18rem;" *ngFor="let produto of listaProdutos">
+
+            <div class="card-body">
+                <img src="{{produto.imagem}}" class="card-img-top" alt="Imagem do produto">
+                <h5 class="card-title">{{produto.nome}}</h5>
+
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Código: {{produto.id}}</li>
+                <li class="list-group-item">Preço R{{produto.preco | currency}}</li>
+                <li class="list-group-item">Quantidade em estoque: {{produto.qtdEstoque}}</li>
+            </ul>
+            <div class="card-body">
+                <button class="btn btn-outline-info mr-5 ">Editar</button>
+                <button class="btn btn-outline-danger ">Apagar</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
