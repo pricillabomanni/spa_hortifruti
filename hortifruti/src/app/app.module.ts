@@ -10,7 +10,8 @@ import { LojaComponent } from './loja/loja.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { EditarComponent } from './editar/editar.component'
+import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component'
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { EditarComponent } from './editar/editar.component'
     NavbarComponent,
     HomeComponent,
     LojaComponent,
-    EditarComponent
+    EditarComponent,
+    DeletarComponent
   ],
   imports: [
     BrowserModule,

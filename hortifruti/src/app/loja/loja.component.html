@@ -5,7 +5,7 @@
         <hr class="col-4">
     </div>
 
-    <div class=" col-12 ">
+    <div class=" col-12">
         <div class="form-group">
             <label for="formGroupExampleInput">Nome:</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite por exemplo Banana"
@@ -37,14 +37,19 @@
         <hr class="col-5">
     </div>
 
+    <div *ngIf = 'alerta'>
+        <div class="alert alert-success" role="alert">
+            Produto deletado com sucesso!
+        </div>
+    </div>
 
     <div class="row col-12 d-flex justify-content-around mt-5">
 
         <div class="card col-md-3 mx-3 mb-5 text-center" style="width: 18rem;" *ngFor="let produto of listaProdutos">
 
             <div class="card-body">
-                <img src="{{produto.imagem}}" class="card-img-top" style="width: 200px; height: 150px; background-size: cover;"
-                alt="Imagem do produto">
+                <img src="{{produto.imagem}}" class="card-img-top"
+                    style="width: 200px; height: 150px; background-size: cover;" alt="Imagem do produto">
                 <h5 class="card-title">{{produto.nome}}</h5>
 
             </div>
@@ -55,7 +60,7 @@
             </ul>
             <div class="card-body">
                 <button class="btn btn-outline-info mr-5" [routerLink]="['/editar', produto.id]">Editar</button>
-                <button class="btn btn-outline-danger" [routerLink]="['/apagar', produto.id]">Apagar</button>
+                <button class="btn btn-outline-danger" [routerLink]="['/deletar', produto.id]">Apagar</button>
 
 
             </div>

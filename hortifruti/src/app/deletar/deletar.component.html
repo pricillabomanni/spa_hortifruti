@@ -1,0 +1,34 @@
+<div>
+    <h3 class="text-center mt-5 text-monospace">Deletar Produto</h3>
+    <hr class="col-5">
+</div>
+
+<div class="row col-12 d-flex justify-content-around mt-5">
+
+    <div class="card col-md-3 mx-3 mb-5 text-center" style="width: 18rem;">
+
+        <div class="card-body">
+            <img src="{{produto.imagem}}" class="card-img-top"
+                style="width: 200px; height: 150px; background-size: cover;" alt="Imagem do produto">
+            <h5 class="card-title">{{produto.nome}}</h5>
+
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Código: {{produto.id}}</li>
+            <li class="list-group-item">Preço R{{produto.preco | currency}}</li>
+            <li class="list-group-item">Quantidade em estoque: {{produto.qtdEstoque}}</li>
+        </ul>
+    </div>
+</div>
+
+
+<div>
+    <h3 class="text-center mt-5 text-monospace">Você tem certeza que deseja deletar esse produto?</h3>
+    <hr class="col-8">
+</div>
+<div class=" col-md-12 d-flex justify-content-center my-5 ">
+
+    <button class="btn btn-outline-success mr-3" (click)="btnSim()">Sim</button>
+    <button class="btn btn-outline-danger mr-3" (click)="btnNao()">Não</button>
+
+</div>

@@ -27,6 +27,9 @@ getByIdProduto(id: number){
   return this.http.get(`http://31.220.57.121:9080/produtos/${id}`)
 }
 
+deleteProduto(id: number){
+  return this.http.delete(`http://31.220.57.121:9080/produtos/${id}`)
+}
 
 
 }
