@@ -1,4 +1,4 @@
-<div class="container ">
+<div class="container my-5">
 
     <div>
         <h2 class="text-center text-monospace mt-5">Edição de Produto</h2>
@@ -6,30 +6,38 @@
     </div>
 
     <div class=" col-12 ">
-        <div class="form-group">
-            <label for="formGroupExampleInput">Nome:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite por exemplo Banana"
-                [(ngModel)]="produto.nome">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Preço:</label>
-            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Digite por exemplo 5,00"
-                [(ngModel)]="produto.preco">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Imagem:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2"
-                placeholder="Digite aqui a url da imagem" [(ngModel)]="produto.imagem">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Quantidade em estoque:</label>
-            <input type="number" class="form-control" id="formGroupExampleInput2"
-                placeholder="Digite a quantidade que tem disponivel" [(ngModel)]="produto.qtdEstoque">
-        </div>
-        <div>
-            <button type="button" class="btn btn-outline-success mr-5" (click)="salvar()">Salvar</button>
-        </div>
 
+        <div class="row">
+            <div class="col-4">
+                <img src="{{produto.imagem}}" style="width: 300px; height: 200px; background-size: cover;"alt="imagem da fruta">
+            </div>
+
+            <div class="col-8">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Nome:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput"
+                        placeholder="Digite por exemplo Banana" [(ngModel)]="produto.nome">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Preço:</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Digite por exemplo 5,00" [(ngModel)]="produto.preco">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Imagem:</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Digite aqui a url da imagem" [(ngModel)]="produto.imagem">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Quantidade em estoque:</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Digite a quantidade que tem disponivel" [(ngModel)]="produto.qtdEstoque">
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-success mr-5" (click)="salvar()">Salvar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
