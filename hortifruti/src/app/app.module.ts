@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { LojaComponent } from './loja/loja.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './editar/editar.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms'
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    LojaComponent
+    LojaComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
